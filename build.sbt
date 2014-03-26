@@ -12,10 +12,6 @@ organization := "ru.simplesys"
 
 libraryDependencies ++= {
     Seq(
-//	      "com.chuusai" % "shapeless" % "2.0.0-SNAPSHOT" cross CrossVersion.full changing(),
-	      "org.scalaz" %% "scalaz-core" % "7.0.6",
-//
-        "com.simplesys" %% "common" % "1.0.0-SNAPSHOT" % "test",
         "joda-time" % "joda-time" % "2.2",
         "org.joda" % "joda-convert" % "1.3.1",
         "org.scalatest" %% "scalatest" % "2.1.0" % "test"

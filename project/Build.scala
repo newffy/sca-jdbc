@@ -8,7 +8,8 @@ object BuildSettings {
     version := "1.0.0",
     scalacOptions ++= Seq("-deprecation", "-explaintypes", "-feature", "-language:postfixOps", "-language:implicitConversions", "-language:higherKinds"),
     scalaVersion := "2.10.4",
-    addCompilerPlugin("org.scalamacros" % "paradise" % paradiseVersion cross CrossVersion.full)
+    addCompilerPlugin("org.scalamacros" % "paradise" % paradiseVersion cross CrossVersion.full),
+    libraryDependencies += "com.chuusai" % "shapeless_2.10.3" % "2.0.0-SNAPSHOT" changing()// cross CrossVersion.full changing()
   )
 }
 
@@ -29,8 +30,7 @@ object ThisBuild extends Build {
       libraryDependencies ++= (
         if (scalaVersion.value.startsWith("2.10")) List("org.scalamacros" % "quasiquotes" % paradiseVersion cross CrossVersion.full)
         else Nil
-        ),
-      libraryDependencies += "com.chuusai" % "shapeless_2.10.3" % "2.0.0-SNAPSHOT" changing()// cross CrossVersion.full changing()
+        )
     )
   )
 }

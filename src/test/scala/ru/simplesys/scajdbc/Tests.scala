@@ -2,7 +2,7 @@ package ru.simplesys
 package scajdbc
 
 import org.scalatest.FunSuite
-import com.simplesys.log.Logging
+//import com.simplesys.log.Logging
 import ru.simplesys.scajdbc.macros._
 
 trait SomeTrait {
@@ -33,7 +33,7 @@ trait SomeTrait {
 }
 
 
-class Tests extends FunSuite with Logging {
+class Tests extends FunSuite /*with Logging*/ {
 
   test("Table A_USER") {
 
